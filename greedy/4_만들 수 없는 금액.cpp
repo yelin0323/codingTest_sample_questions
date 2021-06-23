@@ -18,13 +18,11 @@ int main(void) {
 
     sort(arr.begin(), arr.end());
 
-    int target = 1;
+    int coin = 1;
     for (int i = 0; i < n; i++) {
-        // 만들 수 없는 금액을 찾았을 때 반복 종료
-        if (target < arr[i]) break;
-        target += arr[i];
+        if (coin < arr[i]) break;
+        coin += arr[i];
     }
 
-    // 만들 수 없는 금액 출력
-    cout << target << '\n';
+    cout << coin << '\n';
 }
