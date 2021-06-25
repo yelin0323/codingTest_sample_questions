@@ -5,11 +5,12 @@
 
 using namespace std;
 
-int solution(vector<int> food_times, int k)
+int solution(vector<int> food_times, long long k)
 {
-	int time = 0;
-	int flag = 0;
-	int total = 0;
+	long long time = 0;
+	long long flag = 0;
+	long long total = 0;
+	
 	for (int i = 0; i < food_times.size(); i++)
 	{
 		total = total + food_times[i];
@@ -29,7 +30,7 @@ int solution(vector<int> food_times, int k)
 		flag = (flag + 1) % food_times.size();
 	}
 	
-	return flag;
+	return flag+1;
 }
 
 
@@ -41,10 +42,10 @@ int main(void)
 	food_times.push_back(1);
 	food_times.push_back(2);
 
-	int k = 5;
+	long long k = 5;
 
-	int result = solution(food_times, k);
-	cout << result+1;
+	long long result = solution(food_times, k);
+	cout << result;
 
 	return 0;
 }
